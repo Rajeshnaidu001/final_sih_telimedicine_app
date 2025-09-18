@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/loginPageFragment">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/loginPageFragment"
         android:name="com.example.final_sih_telimedicine_app.ui.home.LoginPageFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/login_page" />
+        android:label="Login"
+        tools:layout="@layout/login_page">
+
+        <action
+            android:id="@+id/action_loginPageFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.final_sih_telimedicine_app.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.final_sih_telimedicine_app.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/homeFragment"
+        android:name="com.example.final_sih_telimedicine_app.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
 </navigation>
